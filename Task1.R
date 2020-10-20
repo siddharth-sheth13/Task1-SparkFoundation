@@ -1,0 +1,7 @@
+task1=read.csv("Task1.csv", stringsAsFactors=TRUE)
+str(task1)
+plot(task1$Hours, task1$Scores)
+model1= lm(Scores ~ Hours, data=task1)
+summary(model1)
+predictScore<- data.frame(Hours=c(9.25))
+predict(model1, newdata=predictScore)
